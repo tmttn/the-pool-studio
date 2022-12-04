@@ -40,19 +40,19 @@ export function Head({ data }) {
   const { seoMetaInformation } = data.contentfulPortfolioEntry;
   return (
     <>
-      <meta property="og:title">{seoMetaInformation.seoTitle}</meta>
+      <meta property="og:title" content={seoMetaInformation.seoTitle} />
       <meta
         property="og:description"
         content={seoMetaInformation.description.description}
       />
-      <meta property="og:image" content={seoMetaInformation.seoImage.url} />
+      <meta property="og:image" content={seoMetaInformation.image.url} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="robots"
         content={`${seoMetaInformation.noIndex && "noindex"}${
           seoMetaInformation.noIndex && seoMetaInformation.noFollow && ","
         }${seoMetaInformation.noFollow && "nofollow"}`}
-      ></meta>
+      />
     </>
   );
 }
