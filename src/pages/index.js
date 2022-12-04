@@ -16,6 +16,7 @@ export default function Index({ data }) {
 export function Head() {
   return (
     <>
+      <title>Ellen Lagiewka - freelance producer</title>
       <meta property="og:title" content="Ellen Lagiewka - freelance producer" />
       <meta
         property="og:description"

@@ -32,6 +32,7 @@ export default function ContactAbout() {
 export function Head() {
   return (
     <>
+      <title>Ellen Lagiewka - freelance producer - contact + about</title>
       <meta property="og:title" content="Ellen Lagiewka - freelance producer - contact + about" />
       <meta
         property="og:description"

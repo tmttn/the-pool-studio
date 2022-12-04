@@ -40,6 +40,7 @@ export function Head({ data }) {
   const { seoMetaInformation } = data.contentfulPortfolioEntry;
   return (
     <>
+      <title>{seoMetaInformation.title}</title>
       <meta property="og:title" content={seoMetaInformation.seoTitle} />
       <meta
         property="og:description"

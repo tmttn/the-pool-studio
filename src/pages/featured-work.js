@@ -17,6 +17,7 @@ export default function FeaturedWork({ data }) {
 export function Head() {
   return (
     <>
+      <title>Ellen Lagiewka - freelance producer - featured work</title>
       <meta property="og:title" content="Ellen Lagiewka - freelance producer - featured work" />
       <meta
         property="og:description"
