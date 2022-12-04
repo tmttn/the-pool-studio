@@ -13,6 +13,7 @@ export default function PortfolioEntries({ portfolioEntries }) {
             node.largeSmall ? "md:col-span-2" : ""
           }`}
         >
+          <h2 className="sr-only">{node.title}</h2>
           <Video
             videoUrl={node.visual.url}
             placeholderImage={node.placeholderImage}
