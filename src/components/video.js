@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { convertToBgImage } from "gbimage-bridge";
-import BackgroundImage from "gatsby-background-image-es5";
+import BackgroundImage from "gatsby-background-image";
 import { getImage } from "gatsby-plugin-image";
 
 export default function Video({
