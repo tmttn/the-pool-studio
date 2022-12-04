@@ -9,7 +9,7 @@ export default function Video({ videoUrl, autoPlay=true, controls=false, ...prop
   }, []);
   
   return (allowVideo &&
-    <video autoPlay={autoPlay} controls={controls} muted loop className="w-full max-w-full">
+    <video autoPlay={autoPlay} controls={controls} muted loop disablePictureInPicture={controls} className="w-full max-w-full">
       <source src={videoUrl} type="video/mp4" />
       <track kind="captions" />
     </video>
