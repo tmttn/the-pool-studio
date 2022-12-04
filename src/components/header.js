@@ -7,7 +7,7 @@ export default function Header() {
     <header className="grid justify-items-center">
       <Link
         to="/"
-        className="font-serif text-5xl font-thin tracking-widest text-gray-800 mt-11"
+        className="font-serif text-5xl font-thin tracking-widest text-gray-700 mt-11"
       >
         <h1>ellen lagiewka</h1>
       </Link>

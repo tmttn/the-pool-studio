@@ -16,7 +16,7 @@ export default function Index({ data }) {
 
 export const query = graphql`
   {
-    allContentfulPortfolioEntry {
+    allContentfulPortfolioEntry(sort: { fields: [order], order: ASC }) {
       edges {
         node {
           id
