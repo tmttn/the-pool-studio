@@ -11,12 +11,15 @@ export default function PortfolioEntry({ data }) {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center max-w-4xl mt-8 mb-20">
+      <div className="w-full max-w-4xl mt-8 aspect-video">
         <Video
           videoUrl={portfolioEntry.visual.url}
           autoPlay={false}
           controls={true}
+          placeholderImage={portfolioEntry.placeholderImage}
         />
+      </div>
+      <div className="flex flex-col items-center max-w-4xl mb-20 w-4xl">
         <div className="flex flex-col items-center mt-8">
           <h2 className="py-4 text-sm font-bold">{portfolioEntry.title}</h2>
           <ContentfulRichText content={portfolioEntry.description} />
@@ -37,6 +40,13 @@ export const query = graphql`
   query ($slug: String!) {
     contentfulPortfolioEntry(slug: { eq: $slug }) {
       title
+      placeholderImage {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
       visual {
         url
       }

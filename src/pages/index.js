@@ -20,6 +20,13 @@ export const query = graphql`
         node {
           id
           slug
+          placeholderImage {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
           visual {
             url
           }

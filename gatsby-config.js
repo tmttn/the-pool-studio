@@ -20,6 +20,12 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
       },
     },
+    {
+      resolve: 'gatsby-background-image-es5',
+      options: {
+        specialChars: '/:',
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

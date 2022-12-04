@@ -9,14 +9,11 @@ export default function PortfolioEntries({ portfolioEntries }) {
         <Link
           to={`/featured-work/${node.slug}`}
           key={node.id}
-          className={`block aspect-[16/9] ${
+          className={`block aspect-video ${
             node.largeSmall ? "md:col-span-2" : ""
           }`}
-          style={{
-            backgroundImage: `url("${node.visual.url}")`,
-          }}
         >
-          <Video videoUrl={node.visual.url} />
+          <Video videoUrl={node.visual.url} placeholderImage={node.placeholderImage}/>
         </Link>
       ))}
     </div>
