@@ -26,6 +26,7 @@ module.exports = {
         specialChars: '/:',
       },
     },
+    `gatsby-plugin-preact`, 
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
