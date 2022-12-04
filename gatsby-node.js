@@ -7,6 +7,14 @@ exports.createPages = async ({ actions: {createPage, createSlice}, graphql }) =>
     id: `footer`,
     component: require.resolve(`./src/components/footer.js`),
   });
+  createSlice({
+    id: `contact-icons`,
+    component: require.resolve(`./src/components/contact-icons.js`),
+  });
+  createSlice({
+    id: `contact-text`,
+    component: require.resolve(`./src/components/contact-text.js`),
+  });
 
   const { data } = await graphql(`
     query {

@@ -1,5 +1,5 @@
+import { Slice } from "gatsby";
 import React from "react";
-import ContactText from "../components/contact-text";
 import Layout from "../components/layout";
 
 export default function ContactAbout() {
@@ -20,7 +20,7 @@ export default function ContactAbout() {
         <section className="w-full mt-16">
           <h2 className="mb-20 font-serif text-4xl font-thin tracking-widest">coffee or collab?</h2>
 
-          <ContactText />
+          <Slice alias="contact-text" />
         </section>
       </div>
     </Layout>
