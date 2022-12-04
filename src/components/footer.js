@@ -1,4 +1,4 @@
-import React from "preact";
+import React from "react";
 
 export default function Footer() {
   return (

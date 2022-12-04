@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from "gatsby";
-import React from "preact";
+import React from "react";
 
 export default function ContactText() {
   const social = useStaticQuery(graphql`

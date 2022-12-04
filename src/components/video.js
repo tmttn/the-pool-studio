@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "preact";
+import React, { useEffect, useState } from "react";
 import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
 import { getImage } from "gatsby-plugin-image";

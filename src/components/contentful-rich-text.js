@@ -1,4 +1,4 @@
-import React from "preact";
+import React from "react";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 

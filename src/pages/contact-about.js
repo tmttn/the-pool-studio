@@ -1,5 +1,5 @@
 import { Slice } from "gatsby";
-import React from "preact";
+import React from "react";
 import Layout from "../components/layout";
 
 export default function ContactAbout() {

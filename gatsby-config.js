@@ -21,12 +21,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-background-image-es5',
+      resolve: "gatsby-background-image-es5",
       options: {
-        specialChars: '/:',
+        specialChars: "/:",
       },
     },
-    `gatsby-plugin-preact`, 
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

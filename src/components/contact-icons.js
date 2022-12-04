@@ -1,5 +1,5 @@
 import { useStaticQuery, graphql } from "gatsby";
-import React from "preact";
+import React from "react";
 import { Phone, Mail } from "tabler-icons-react";
 
 export default function ContactIcons() {

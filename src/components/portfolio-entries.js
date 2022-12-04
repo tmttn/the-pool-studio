@@ -1,4 +1,4 @@
-import React from "preact";
+import React from "react";
 import Video from "./video";
 import { Link } from "gatsby";
 
