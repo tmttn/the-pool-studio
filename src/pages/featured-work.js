@@ -16,7 +16,7 @@ export default function FeaturedWork({ data }) {
 
 export const query = graphql`
   {
-    allContentfulPortfolioEntry(sort: { fields: [order], order: ASC }) {
+    allContentfulPortfolioEntry(sort: { order: ASC }) {
       edges {
         node {
           id
