@@ -34,7 +34,7 @@ export default function Video({
           loop
           disablePictureInPicture={!controls}
           onCanPlayThrough={videoLoaded}
-          className={`hidden md:block absolute top-0 left-0 w-full max-w-full ${
+          className={`absolute top-0 left-0 w-full max-w-full ${
             isVideoLoaded ? "z-30" : "z-10"
           }`}
         >
