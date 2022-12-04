@@ -1,4 +1,4 @@
-import React from "react";
+import React from "preact";
 import { Link } from "gatsby";
 
 export default function Navigation() {

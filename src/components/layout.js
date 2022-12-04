@@ -1,4 +1,4 @@
-import React from "react";
+import React from "preact";
 import { Slice } from "gatsby";
 
 export default function Layout({ children }) {

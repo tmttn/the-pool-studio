@@ -1,4 +1,4 @@
-import React from "react";
+import React from "preact";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import PortfolioEntries from "../components/portfolio-entries";

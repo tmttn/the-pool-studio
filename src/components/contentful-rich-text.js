@@ -1,4 +1,4 @@
-import React from "react";
+import React from "preact";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 
@@ -15,5 +15,9 @@ export default function ContentfulRichText({ content }) {
     },
   };
 
-  return <div className="flex flex-col items-center text-sm font-thin leading-relaxed tracking-wider">{renderRichText(content, options)}</div>;
+  return (
+    <div className="flex flex-col items-center text-sm font-thin leading-relaxed tracking-wider">
+      {renderRichText(content, options)}
+    </div>
+  );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "preact";
 import Video from "./video";
 import { Link } from "gatsby";
 
@@ -13,7 +13,10 @@ export default function PortfolioEntries({ portfolioEntries }) {
             node.largeSmall ? "md:col-span-2" : ""
           }`}
         >
-          <Video videoUrl={node.visual.url} placeholderImage={node.placeholderImage}/>
+          <Video
+            videoUrl={node.visual.url}
+            placeholderImage={node.placeholderImage}
+          />
         </Link>
       ))}
     </div>

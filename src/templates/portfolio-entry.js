@@ -1,4 +1,4 @@
-import React from "react";
+import React from "preact";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Video from "../components/video";
