@@ -36,6 +36,27 @@ export default function PortfolioEntry({ data }) {
   );
 }
 
+export function Head({ data }) {
+  const { seoMetaInformation } = data.contentfulPortfolioEntry;
+  return (
+    <>
+      <meta property="og:title">{seoMetaInformation.seoTitle}</meta>
+      <meta
+        property="og:description"
+        content={seoMetaInformation.description.description}
+      />
+      <meta property="og:image" content={seoMetaInformation.seoImage.url} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="robots"
+        content={`${seoMetaInformation.noIndex && "noindex"}${
+          seoMetaInformation.noIndex && seoMetaInformation.noFollow && ","
+        }${seoMetaInformation.noFollow && "nofollow"}`}
+      ></meta>
+    </>
+  );
+}
+
 export const query = graphql`
   query ($slug: String!) {
     contentfulPortfolioEntry(slug: { eq: $slug }) {
@@ -52,6 +73,17 @@ export const query = graphql`
       }
       description {
         raw
+      }
+      seoMetaInformation {
+        noFollow
+        noIndex
+        seoTitle
+        image {
+          url
+        }
+        description {
+          description
+        }
       }
     }
   }

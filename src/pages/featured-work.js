@@ -14,6 +14,20 @@ export default function FeaturedWork({ data }) {
   );
 }
 
+export function Head() {
+  return (
+    <>
+      <meta property="og:title" content="Ellen Lagiewka - freelance producer - featured work" />
+      <meta
+        property="og:description"
+        content="The Pool Studio is the portfolio website of Ellen Lagiewka - freelance producer. Take a look at some of the work I've done."
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+    </>
+  );
+}
+
+
 export const query = graphql`
   {
     allContentfulPortfolioEntry(sort: { order: ASC }) {
