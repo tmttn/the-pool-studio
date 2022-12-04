@@ -28,3 +28,16 @@ export default function ContactAbout() {
     </Layout>
   );
 }
+
+export function Head() {
+  return (
+    <>
+      <meta property="og:title" content="Ellen Lagiewka - freelance producer - contact + about" />
+      <meta
+        property="og:description"
+        content="The Pool Studio is the portfolio website of Ellen Lagiewka - freelance producer. Contact me for your tv / film / commercial / music video or other audiovisual production."
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+    </>
+  );
+}
