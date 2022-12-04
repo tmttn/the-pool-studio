@@ -25,7 +25,7 @@ export default function Video({
   const bgImage = convertToBgImage(image);
 
   return (
-    <div className="relative">
+    <div className="relative mx-2 lg:mx-0">
       {allowVideo && (
         <video
           autoPlay={autoPlay}
@@ -34,7 +34,7 @@ export default function Video({
           loop
           disablePictureInPicture={!controls}
           onCanPlayThrough={videoLoaded}
-          className={`absolute top-0 left-0 w-full max-w-full ${
+          className={`hidden md:block absolute top-0 left-0 w-full max-w-full ${
             isVideoLoaded ? "z-30" : "z-10"
           }`}
         >
