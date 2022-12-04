@@ -6,7 +6,7 @@ export default function ContactAbout() {
   return (
     <Layout>
       <div className="flex flex-col items-center max-w-6xl mb-16 text-gray-700">
-        <section className="px-20 mt-32 text-center border-b border-b-black">
+        <section className="px-8 mt-32 text-center border-b lg:px-20 border-b-black">
           <h2 className="font-serif text-4xl">about</h2>
           <p className="mt-16 font-light tracking-wide">
             I'm a freelance producer based in Ghent (BE), with roots in Limburg
@@ -17,7 +17,7 @@ export default function ContactAbout() {
             audiovisual production.
           </p>
         </section>
-        <section className="w-full mt-16">
+        <section className="w-full px-8 mt-16 lg:px-0">
           <h2 className="mb-20 font-serif text-4xl font-thin tracking-widest">
             coffee or collab?
           </h2>
