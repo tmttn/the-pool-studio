@@ -18,7 +18,7 @@
     "gatsby": "^5.2.0",
     "gatsby-background-image": "^1.6.0",
     "gatsby-background-image-es5": "^1.6.0",
-    "gatsby-plugin-gatsby-cloud": "^5.2.0",
+    "gatsby-plugin-gatsby-cloud": "^5.6.0",
     "gatsby-plugin-image": "^3.2.0",
     "gatsby-plugin-manifest": "^5.2.0",
     "gatsby-plugin-preconnect": "^1.4.0",
