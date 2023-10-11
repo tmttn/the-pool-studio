@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/027f4ba8-c89f-4c6c-a926-831e97178381/deploy-status)](https://app.netlify.com/sites/the-pool-studio/deploys)
 
 <h1 align="center">
   The Pool Studio
