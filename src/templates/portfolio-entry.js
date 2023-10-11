@@ -50,9 +50,9 @@ export function Head({ data }) {
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="robots"
-        content={`${seoMetaInformation.noIndex && "noindex"}${
-          seoMetaInformation.noIndex && seoMetaInformation.noFollow && ","
-        }${seoMetaInformation.noFollow && "nofollow"}`}
+        content={`${seoMetaInformation.noIndex && "noindex" || ""}${
+          seoMetaInformation.noIndex && seoMetaInformation.noFollow && "," || ""
+        }${seoMetaInformation.noFollow && "nofollow" || ""}`}
       />
     </>
   );
