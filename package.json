@@ -36,7 +36,7 @@
     "autoprefixer": "^10.4.16",
     "gatsby-plugin-postcss": "^6.12.0",
     "postcss": "^8.4.31",
-    "tailwindcss": "^4.0.0"
+    "tailwindcss": "^3.3.3"
   },
   "optionalDependencies": {
     "@parcel/watcher-linux-x64-glibc": "^2.3.0"
