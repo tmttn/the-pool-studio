@@ -1,8 +1,9 @@
-import React from "react";
-import { BLOCKS, MARKS } from "@contentful/rich-text-types";
-import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 
 export default function ContentfulRichText({ content }) {
+  if (!content) return null;
+
   const Bold = ({ children }) => <span className="bold">{children}</span>;
   const Text = ({ children }) => <p className="align-center">{children}</p>;
 
@@ -17,7 +18,7 @@ export default function ContentfulRichText({ content }) {
 
   return (
     <div className="flex flex-col items-center text-sm font-thin leading-relaxed tracking-wider">
-      {renderRichText(content, options)}
+      {documentToReactComponents(content, options)}
     </div>
   );
 }

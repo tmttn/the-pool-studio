@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { convertToBgImage } from "gbimage-bridge";
-import BackgroundImage from "gatsby-background-image";
-import { getImage } from "gatsby-plugin-image";
+'use client';
+
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Video({
   videoUrl,
   autoPlay = true,
   controls = false,
   placeholderImage,
-  ...props
 }) {
   const [allowVideo, setAllowVideo] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -21,32 +20,35 @@ export default function Video({
     setIsVideoLoaded(true);
   };
 
-  const image = getImage(placeholderImage);
-  const bgImage = convertToBgImage(image);
-
   return (
-    <div className="relative mx-2 lg:mx-0">
+    <div className="relative mx-2 lg:mx-0 aspect-video">
       {allowVideo && (
         <video
           autoPlay={autoPlay}
           controls={controls}
           muted
           loop
+          playsInline
           disablePictureInPicture={!controls}
           onCanPlayThrough={videoLoaded}
-          className={`absolute top-0 left-0 w-full max-w-full ${
-            isVideoLoaded ? "z-30" : "z-10"
+          className={`absolute top-0 left-0 w-full h-full object-cover ${
+            isVideoLoaded ? 'z-30' : 'z-10'
           }`}
         >
           <source src={videoUrl} type="video/mp4" />
           <track kind="captions" />
         </video>
       )}
-      <BackgroundImage
-        {...bgImage}
-        preserveStackingContext
-        className="absolute top-0 left-0 aspect-video z30"
-      ></BackgroundImage>
+      {placeholderImage && (
+        <Image
+          src={placeholderImage.url}
+          alt=""
+          fill
+          sizes="(max-width: 768px) 100vw, 896px"
+          className="object-cover z-20"
+          priority={false}
+        />
+      )}
     </div>
   );
 }
