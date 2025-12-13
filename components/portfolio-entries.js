@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import Video from './video';
 
 export default function PortfolioEntries({ portfolioEntries }) {
@@ -22,3 +23,20 @@ export default function PortfolioEntries({ portfolioEntries }) {
     </div>
   );
 }
+
+PortfolioEntries.propTypes = {
+  portfolioEntries: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      slug: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      largeSmall: PropTypes.bool,
+      visual: PropTypes.shape({
+        url: PropTypes.string.isRequired,
+      }).isRequired,
+      placeholderImage: PropTypes.shape({
+        url: PropTypes.string.isRequired,
+      }),
+    })
+  ).isRequired,
+};

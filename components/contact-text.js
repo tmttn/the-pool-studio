@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function ContactText({ contactInfo }) {
   if (!contactInfo) return null;
 
@@ -18,3 +20,10 @@ export default function ContactText({ contactInfo }) {
     </div>
   );
 }
+
+ContactText.propTypes = {
+  contactInfo: PropTypes.shape({
+    phoneNumber: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  }),
+};

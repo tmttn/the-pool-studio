@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 export default function Video({
   videoUrl,
@@ -52,3 +53,12 @@ export default function Video({
     </div>
   );
 }
+
+Video.propTypes = {
+  videoUrl: PropTypes.string.isRequired,
+  autoPlay: PropTypes.bool,
+  controls: PropTypes.bool,
+  placeholderImage: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+  }),
+};

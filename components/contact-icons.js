@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Phone, Mail } from 'tabler-icons-react';
 
 export default function ContactIcons({ contactInfo }) {
@@ -20,3 +21,10 @@ export default function ContactIcons({ contactInfo }) {
     </div>
   );
 }
+
+ContactIcons.propTypes = {
+  contactInfo: PropTypes.shape({
+    phoneNumber: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  }),
+};
