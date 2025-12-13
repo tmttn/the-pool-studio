@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import PropTypes from 'prop-types';
 import Video from '@/components/video';
 import ContentfulRichText from '@/components/contentful-rich-text';
 import BackButton from '@/components/back-button';
@@ -38,6 +39,12 @@ export async function generateMetadata({ params }) {
   };
 }
 
+const paramsShape = {
+  params: PropTypes.shape({
+    slug: PropTypes.string,
+  }).isRequired,
+};
+
 export default async function PortfolioEntryPage({ params }) {
   const { slug } = await params;
   const portfolioEntry = await getPortfolioEntry(slug);
@@ -66,3 +73,6 @@ export default async function PortfolioEntryPage({ params }) {
     </>
   );
 }
+
+PortfolioEntryPage.propTypes = paramsShape;
+generateMetadata.propTypes = paramsShape;

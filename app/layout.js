@@ -1,4 +1,5 @@
 import './globals.css';
+import PropTypes from 'prop-types';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from '@/components/header';
@@ -39,3 +40,7 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+RootLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
