@@ -1,4 +1,6 @@
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 
@@ -31,6 +33,8 @@ export default function RootLayout({ children }) {
           </main>
           <Footer />
         </div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
