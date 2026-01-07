@@ -52,7 +52,7 @@ module.exports = withSentryConfig(nextConfig, {
   // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
 
   org: 'tom-metten',
-  project: 'the-pool-studio',
+  project: 'thepool-studio',
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
