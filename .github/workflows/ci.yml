@@ -164,6 +164,7 @@ jobs:
         GHSA-w7fw-mjwx-w883
         GHSA-8fgc-7cc6-rx7x
         GHSA-3ppc-4f35-3m26
+        GHSA-2g4f-4pwh-qvx6
 
     - name: Create security audit summary
       run: |
